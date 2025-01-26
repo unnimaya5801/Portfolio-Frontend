@@ -1,72 +1,62 @@
-/* General styles */
+/* Global Styles */
 body {
   margin: 0;
+  padding: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: #5fa9f3; /* Subtle, professional light gray-blue */
-  color: #333; /* Dark gray for text */
+  color: #fff; /* Default text color for dark backgrounds */
 }
 
-/* Hero section styles */
+/* Background Image for the Hero Section */
 .hero {
-  height: 100vh; /* Full-screen height */
+  background-image: url('https://img.freepik.com/premium-photo/laptop-computer-screen-white-background_53876-465740.jpg'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Full viewport height */
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url('https://img.lovepik.com/photo/45015/7636.jpg_wh860.jpg') no-repeat center center/cover;
-  background-size: cover; /* Ensure the background image covers the entire section */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
 }
 
-/* Text in the hero section */
 .hero h4 {
   font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: #000000; /* Change text color to black */
+  margin-bottom: 0.5rem;
+  font-weight: bold;
 }
 
-.hero h2 {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  color: #000000; /* Change text color to black */
+.hero h1 {
+  font-size: 2rem;
+  margin-top: 0;
 }
 
-.hero .btn {
-  font-size: 1.25rem;
-  padding: 0.75rem 1.5rem;
-  border-radius: 50px;
+/* Navbar */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.85); /* Semi-transparent black */
+  padding: 1rem 0;
 }
 
-/* Light button styling */
-.hero .btn-light {
-  background-color: #4c82af; /* Professional blue for the button */
+.navbar a {
   color: #ffffff;
-  border: none;
-  transition: all 0.3s ease;
+  margin-right: 15px;
+  text-transform: uppercase;
 }
 
-.hero .btn-light:hover {
-  background-color: #388e3c; /* Slightly darker blue for hover */
-  color: #ffffff;
+.navbar a:hover {
+  color: #ffca28; /* Accent color */
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero p {
-    font-size: 1.2rem;
-  }
-
-  .hero .btn {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-  }
+/* Main Content */
+.main-content {
+  background-color: #f0f2f3; /* Dark background for content area */
+  min-height: 100vh;
+  padding: 2rem 0;
 }
 
-
-
-
-
-
+/* Footer */
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}

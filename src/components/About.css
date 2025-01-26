@@ -1,35 +1,136 @@
+/* About Page Styles */
 .about-page {
-    background-color: #f9f9f9;
+  background-color: #f8f9fa;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.about-page .container {
+  max-width: 1200px;
+}
+
+.about-page h1,
+.about-page h2 {
+  color: #343a40;
+}
+
+.about-page .lead {
+  font-size: 1.25rem;
+  color: #6c757d;
+}
+
+.about-page .row {
+  margin-bottom: 30px;
+}
+
+/* Profile Picture Animation */
+.about-page .rounded-circle {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-  
-  .about-page h1,
-  .about-page h2 {
-    color: #333;
+  100% {
+    opacity: 1;
   }
-  
-  .about-page .rounded-circle {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
+}
+
+/* Skills Section */
+.skills {
+  padding: 50px 0; /* Remove background color */
+  background-color: transparent; /* Make background transparent */
+}
+
+.skills h2 {
+  font-size: 2rem;
+  color: #343a40;
+}
+
+.skills .card {
+  opacity: 1;
+  animation: none; /* Remove animation that makes cards disappear */
+  border: none; /* Remove card border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+.skills .card-body {
+  padding: 2rem;
+}
+
+/* Education Section */
+.education {
+  background-color: #f1f3f5;
+  padding: 50px 0;
+}
+
+.education h2 {
+  font-size: 2rem;
+  color: #343a40;
+}
+
+.education .card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* FontAwesome Icons Animations for Skills */
+.skills i {
+  animation: bounceIn 1s ease-in-out;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
   }
-  
-  .about-page .skills i,
-  .about-page .achievements i {
-    color: #007bff;
+  50% {
+    transform: scale(1.25);
+    opacity: 1;
   }
-  
-  .achievements .list-group-item {
-    font-size: 1.1rem;
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  .about-page .container {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
-  .education .card {
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  .about-page h1 {
+    font-size: 1.75rem;
   }
-  
-  .education h5 {
-    color: #007bff;
+
+  .skills h2 {
+    font-size: 1.5rem;
   }
-  
-  
+
+  .education h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Skill Icon Styling */
+.skills .card-body i {
+  font-size: 3rem; /* Adjust icon size */
+  transition: transform 0.3s ease-in-out;
+}
+
+.skills .card-body i:hover {
+  transform: scale(1.2); /* Zoom effect on hover */
+}
+
+/* Education Icon Styling */
+.education .card-body i {
+  font-size: 3rem; /* Adjust icon size */
+  transition: transform 0.3s ease-in-out;
+}
+
+.education .card-body i:hover {
+  transform: scale(1.2); /* Zoom effect on hover */
+}
